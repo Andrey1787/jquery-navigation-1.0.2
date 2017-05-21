@@ -55,6 +55,7 @@
 	};
 
 	Navigate.prototype.init = function(){
+		Math.random();
 		var result = this.options.preInit.call(window, this.options);
 		$.extend({}, this.options, (result || {}));
 		this.fullWidth();
