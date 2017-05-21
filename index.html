@@ -63,10 +63,22 @@
 			},
 
 			onOpen : function(target){
-				target.children('h3').text('Change');
+				target.children('h3').text('Open');
 			},
 
-			onChange : function(target){}
+			onChange : function(target){
+				var colors = [
+					'rgba(255, 0, 0, .7)',
+					'rgba(0, 255, 0, .7)',
+					'rgba(0, 0, 255, .7)'
+				];
+
+				var min = 0,
+					max = colors.length - 1;
+
+				var color = colors[Math.round(Math.random() * (max - min) + min)];
+				target.parent().css('background', color);
+			}
 		});
 	</script>
 </body>
