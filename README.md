@@ -96,7 +96,7 @@ This plugin allows you to display a beautiful sliding menu with content on the c
     </script>
 </body>
 ```
-[Demo](https://andrey1787.github.io/jquery.navigation-1.0.1/)
+[Demo](https://andrey1787.github.io/jquery.navigation-1.0.2/)
 
 # Documentation
 ## Configurations
