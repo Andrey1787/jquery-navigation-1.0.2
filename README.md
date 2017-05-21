@@ -160,4 +160,5 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 			return param;
 		}
 	});
+	//You can perform any other manipulations.If you don't use and don't pass a param object, the method might never return.
 ```
