@@ -50,8 +50,8 @@
 		speedY : 300,
 		width : 200,
 		preInit : function(params){},
-		onOpen : function(navigate){},
-		onChange : function(navigate){}
+		onOpen : function(target){},
+		onChange : function(target){}
 	};
 
 	Navigate.prototype.init = function(){
@@ -115,15 +115,15 @@
 		this.opened = true;
 		this.openX();
 		$(this.container).outerWidth(this.screen);
-		this.options.onOpen(this);
 		this.active();
 		this.showContent();
+		this.options.onOpen(this.target);
 	};
 
 	Navigate.prototype.changeContent = function(){
-		this.options.onChange(this);
 		this.active();
 		this.showContent();
+		this.options.onChange(this.target);
 	};
 
 	Navigate.prototype.openX = function(){

@@ -162,6 +162,26 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 	});
 	//You can perform any other manipulations.If you don't use and don't pass a param object, the method might never return.
 ```
+> You can change the settings and just and right in the event, but priority will of course change in the event.And anyway inside the event you can do anything.It all depends on you:
+
+```js
+    $('ul.navigation').navigate({
+        width : 150,
+        height : 150,
+        indent : 20,
+        speedX : 500,
+        speedY : 500,
+        preInit : function(param){
+            param.width = 300;
+            param.height = 300;
+            param.indent = 25;
+            param.speedX = 1000;
+            param.speedY = 1000;
+            return param;
+        }
+    });
+```
+
 ### Event onOpen
 
 >
