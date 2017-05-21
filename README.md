@@ -186,7 +186,7 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 
 ### Event onOpen
 
-> When the event is open content, you can change the page title.For example:
+> When the event is open content, you can change the page title.Method should not return anything.For example:
 
 ```js
     $('ul.navigation').navigate({
@@ -197,9 +197,23 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 ```
 ### Event onChange
 
->
+> When a dynamic change of the page you can change the background of the content.The method also did not need to return anything.For example:
 
 ```js
+    $('ul.navigation').navigate({
+        onChange : function(target){
+            var colors = [
+                'rgba(255, 0, 0, .7)',
+                'rgba(0, 255, 0, .7)',
+                'rgba(0, 0, 255, .7)'
+            ];
+
+            var min = 0,
+                max = colors.length - 1,
+                color = colors[Math.round(Math.random() * (max - min) + min)];
+            target.parent().css('background', color);
+        }
+    });
 ```
 
 > The next version will be implemented the selection mechanism is fairly content.The height, width or default(height and width).
