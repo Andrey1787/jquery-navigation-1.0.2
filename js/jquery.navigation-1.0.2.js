@@ -117,13 +117,13 @@
 		$(this.container).outerWidth(this.screen);
 		this.active();
 		this.showContent();
-		this.options.onOpen(this.target);
+		this.options.onOpen($(this.target));
 	};
 
 	Navigate.prototype.changeContent = function(){
 		this.active();
 		this.showContent();
-		this.options.onChange(this.target);
+		this.options.onChange($(this.target));
 	};
 
 	Navigate.prototype.openX = function(){
