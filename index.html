@@ -54,11 +54,19 @@
 	<script>
 		$('ul.navigation').navigate({
 			preInit : function(params){
-				console.log(params);
 				params.width = 150;
 				params.height = 150;
+				params.indent = 20;
+				params.speedX = 500;
+				params.speedY = 500;
 				return params;
-			}
+			},
+
+			onOpen : function(target){
+				target.children('h3').text('Change');
+			},
+
+			onChange : function(target){}
 		});
 	</script>
 </body>

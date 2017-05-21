@@ -55,7 +55,7 @@
 	};
 
 	Navigate.prototype.init = function(){
-		var result = this.options.preInit(this.options);
+		var result = this.options.preInit.call(window, this.options);
 		$.extend({}, this.options, (result || {}));
 		this.fullWidth();
 		this.setContainerSize();
@@ -117,13 +117,13 @@
 		$(this.container).outerWidth(this.screen);
 		this.active();
 		this.showContent();
-		this.options.onOpen($(this.target));
+		this.options.onOpen.call(window, $(($(this.target).attr('href') || $(this.target).children().attr('href'))));
 	};
 
 	Navigate.prototype.changeContent = function(){
 		this.active();
 		this.showContent();
-		this.options.onChange($(this.target));
+		this.options.onChange.call(window, $(($(this.target).attr('href') || $(this.target).children().attr('href'))));
 	};
 
 	Navigate.prototype.openX = function(){
