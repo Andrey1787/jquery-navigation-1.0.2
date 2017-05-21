@@ -52,7 +52,14 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="js/jquery.navigation-1.0.2.js"></script>
 	<script>
-		
+		$('ul.navigation').navigate({
+			preInit : function(params){
+				console.log(params);
+				params.width = 150;
+				params.height = 150;
+				return params;
+			}
+		});
 	</script>
 </body>
 </html>

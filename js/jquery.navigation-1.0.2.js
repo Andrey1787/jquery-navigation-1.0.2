@@ -49,13 +49,14 @@
 		speedX : 300,
 		speedY : 300,
 		width : 200,
-		preInit : function(navigate){},
+		preInit : function(params){},
 		onOpen : function(navigate){},
 		onChange : function(navigate){}
 	};
 
 	Navigate.prototype.init = function(){
-		this.options.preInit(this);
+		var result = this.options.preInit(this.options);
+		$.extend({}, this.options, (result || {}));
 		this.fullWidth();
 		this.setContainerSize();
 		this.indentContent();
