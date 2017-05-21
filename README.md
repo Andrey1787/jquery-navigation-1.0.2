@@ -186,9 +186,14 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 
 ### Event onOpen
 
->
+> When the event is open content, you can change the page title.For example:
 
 ```js
+    $('ul.navigation').navigate({
+        onOpen : function(target){
+            target.children('h3').text('Open');
+        }
+    });
 ```
 ### Event onChange
 
