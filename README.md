@@ -174,3 +174,5 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 
 ```js
 ```
+
+> The next version will be implemented the selection mechanism is fairly content.The height, width or default(height and width).
