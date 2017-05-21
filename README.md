@@ -140,6 +140,24 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 
 ***In this version, we added three events to simplify the work with the navigation menu.***
 
-| Event Name |                     Description                 | Default Param | Param Description |
-| :--------: | :---------------------------------------------: | :-----------: | :---------------: |
-| preInit    | The event is called to initialize the navigation menu. | param | This event is passed a param object with all configuration parameters.Now you can edit them directly in the method. |
+| Event Name |                     Description                 | Default Param | Param Description | Return Value |
+| :--------: | :---------------------------------------------: | :-----------: | :---------------: | :----------: |
+| preInit    | The event is called to initialize the navigation menu. | param | This event is passed a param object with all configuration parameters.Now you can edit them directly in the method. | 
+
+## Example
+### Event preInit
+
+> Now you can change the configuration settings directly before initialization.If you change the parameters then you have to get them back:
+
+```js
+	$('ul.navigation').navigate({
+		preInit : function(param){
+			param.width = 150;
+			param.height = 150;
+			param.indent = 20;
+			param.speedX = 500;
+			param.speedY = 500;
+			return param;
+		}
+	});
+```
