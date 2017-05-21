@@ -140,6 +140,6 @@ This plugin allows you to display a beautiful sliding menu with content on the c
 
 ***In this version, we added three events to simplify the work with the navigation menu.***
 
-| Event Name |                     Description                 | Default Param |
-| :--------: | :---------------------------------------------: | :-----------: |
-| preInit    | The event is called to initialize the navigation menu. | param |
+| Event Name |                     Description                 | Default Param | Param Description |
+| :--------: | :---------------------------------------------: | :-----------: | :---------------: |
+| preInit    | The event is called to initialize the navigation menu. | param | This event is passed a param object with all configuration parameters.Now you can edit them directly in the method. |
